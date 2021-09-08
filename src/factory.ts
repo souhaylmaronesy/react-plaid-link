@@ -69,6 +69,7 @@ export const createPlaid = (options: PlaidLinkOptions) => {
     state.onExitCallback = callback;
     state.plaid.exit(exitOptions);
     if (exitOptions && exitOptions.force) {
+      state.plaid.exit()
       state.open = false;
     }
   };
